@@ -8,56 +8,85 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
 
 <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <div id="headerWrapper">
 	<header>
-        <img src="images/logo1x.png" alt="logo">
-		<span>Design Thinking</span>
+        <a href="#"><img src="images/logo-assets/logo1x.png" alt="logo" width="50" height="50" srcset="images/logo-assets/logo1x.png 1x, images/logo-assets/logo2x.png 2x, images/logo-assets/logo3x.png 3x"></a>
+		<span>Iron Automotives</span>
 	</header>
 </div><!-- end header wrapper -->
 
     
     
 <div id="navWrapper">
-    <nav>
+    <nav id ="theNav">
+        <button id="theButton"></button>
         <ul>
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Services</a></li>
-            <li class="active"><a href="#">Best Practices</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li class="active"><a href="#">Services</a></li>
+            <li><a href="#">Trucks</a></li>
+            <li><a href="#">Cars</a></li>
+            <li><a href=""tel:2002003000>Call Us: 200 200 3000</a></li>
         </ul>
     </nav>
 </div> <!-- end nav wrapper -->
 
 <div id="mainWrapper">
     <main>
+        <div id="parentHero">
+            <img src="images/hero.webp" width="1200" height="500" alt="Black renovated car">
+            <p>"Your Car, Your Vision, Our Craft."</p>
+        </div>
 
         <h1>Best Practices</h1>
+        <div class="cards">
+            <section class="bounce">
+                <img src="svgCards/carWrap.svg" alt="car wrap icon">
+                <p>Transform your car with a custom wrap from our expert team! Choose from vibrant colors, intricate designs, or a sleek professional finish.With top-notch materials and precise installation, your wrap will last for years. Contact us today to make your car stand out!</p>
+                <button>Learn More</button>
+            </section>
+            <section class="spin">
+                <img src="svgCards/restoration.svg" alt="restoration icon">
+                <p>Revive your car with our expert restoration services! We specialize in transforming vintage or worn-out cars, handling everything from engine rebuilds to bodywork and interior refurbishing. Visit us today for a consultation and let us bring your automotive dreams to life!</p>
+                <button>Learn More</button>
+            </section>
+
+            <section class="pulse">
+                <img src="svgCards/speedAuto.svg" alt="speed auto icon">
+                <p>Unlock your car’s full potential with our premium speed auto services! We specialize in engine tuning, exhaust upgrades, performance parts, and suspension tuning for enhanced speed and handling. Visit us today and elevate your ride to the next level!</p>
+                <button>Learn More</button>
+            </section>
+
+            <section class="last">
+                <img src="svgCards/sprayCan.svg" alt="spray can icon">
+                <p>Revitalize your car with our expert painting services! Whether restoring its original shine or creating a bold custom design, we use high-quality materials and advanced techniques for flawless results. Schedule your appointment today and bring your vision to life!</p>
+                <button>Learn More</button>
+            </section>
+
+
+        </div>
    
-        <p>Competently myocardinate cross-media infomediaries via end-to-end architectures. Enthusiastically implement end-to-end functionalities vis-a-vis excellent strategic theme areas. Conveniently supply enterprise action items with integrated innovation. Authoritatively cultivate sustainable portals for orthogonal core competencies. Distinctively coordinate team driven portals rather than synergistic processes.</p>
-
-        <p>Appropriately simplify enterprise information via leveraged total linkage. Progressively grow installed base infrastructures without open-source technologies. Distinctively embrace mission-critical internal or "organic" sources after competitive imperatives. Professionally whiteboard state of the art models through high-payoff expertise. Authoritatively exploit transparent users through virtual channels.</p>
-
-        <p>Interactively transition user-centric web services without scalable collaboration and idea-sharing. Holisticly restore next-generation data before seamless expertise. Monotonectally grow synergistic synergy without bricks-and-clicks ROI. Uniquely optimize 24/365 convergence after integrated synergy. Distinctively synthesize high-quality methodologies for performance based bandwidth.</p>
-
-     
+       <div class="reviewWrapper">
+        <h2>What our Cutsomers Say</h2>
+        <div id="cards"></div>
+       </div>
 
     </main>
 </div><!-- end main wrapper -->
     
 <div id="footerWrapper">
     <footer>
-        <p>Copyright &copy; 2025 Design Thinking Inc. All rights reserved. 
+        <p>Copyright &copy; 2025 Iron Automotives All rights reserved. Ruby Guzman
             <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
     </footer>
 </div> <!-- end footer wrapper -->
-   
+<script src="data/reviews.js" type="module"></script>
+<script src="js/scripts.js" type="module"></script>
 </body>
 </html> 

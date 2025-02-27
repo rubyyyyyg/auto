@@ -4,3 +4,22 @@ header, nav, main {
 }
 
 /* NAVIGATION STUFF GOES HERE  */
+
+#cards {
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    h3 {
+        margin: 2rem $gutter 0 $gutter;
+        text-align: center;
+        color: $primaryColor;
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+    section {
+        margin: .5rem;
+        padding: 5px;
+        background-color: white;
+         
+    }
+}

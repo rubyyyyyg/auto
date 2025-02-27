@@ -18,10 +18,33 @@ body {
     font-weight: $lightWeight;
     min-width: 320px;
 }
+#parentHero {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    p {
+        position: absolute;
+        margin: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 100%);
+        top: calc(50% - 25px);
+        width: 80%;
+        left: 10%;
+        padding: .5rem;
+        text-align: center;
+        color: $primaryColor;
+    }
+}
 
+h1 {
+    background-color: rgb(210, 210, 210);
+    color: black;
+}
 
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+#headerWrapper {border-bottom: 1px solid $secondaryColor;}
 header {
     display: grid;
     grid-template-columns: 50px auto;
@@ -37,16 +60,55 @@ header {
 
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+#theButton::before {
+    content: "\2630";
+}
+// style the button 
+#theButton {
+    border: none;
+    background: none; 
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+#theNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li a{
+        color: $primaryColor;
+        display: block;
+        padding: .75rem $gutter;
+        text-decoration: none;
+        border-bottom: 1px solid $greyColor;
+    }
+    li.active a {
+        color: $accentColor;
+        background-color: rgb(221, 221, 221);
+    }
+}
 
+#theButton.open::before {
+    content: "\2715";
+}
 
+#theNav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+    ul {
+        overflow: hidden;
+    }
+}
 
-
-
-
-
-
-
-
+#theNav.open {
+    grid-template-rows: 1fr;
+}
 
 
 
@@ -56,21 +118,107 @@ main {
     h1 {
         padding: 1rem $gutter.5rem $gutter;
         font-size: 1.5rem;
-        color: $secondaryColor;
-        font-weight: $lightWeight
+        color: $accentColor;
+        font-weight: $lightWeight;
     }
     p {
         padding: .5rem $gutter;
         color: #333;
         line-height: $leading;
     }
+    div.cards {
+        padding: 0 8px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 24px 8px;
+        margin-bottom: 5px;
+
+        section{ 
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center; 
+        
+        }
+        button {
+            border: none;
+            border-radius: 10px;
+            width: 50%;
+            background-color: $primaryColor;
+            color: $secondaryColor;
+        }
+        section img {
+            width: 50px;
+            position: relative;
+        }
+        .bounce:hover img {
+            animation: myBounce 1s 1;
+        }
+        .spin:hover img {
+            animation: mySpin 1s 1;
+        }
+        .pulse:hover img {
+            animation: myPulse 1s 1;
+        }
+        .last:hover img {
+            filter: invert(35%) sepia(50%) saturate(1352%) hue-rotate(400deg) brightness(100%) contrast(219%);
+        }
+            @keyframes myBounce {
+                0% {bottom: 0px; animation-timing-function: ease-out;}
+                25% {bottom:15px; animation-timing-function: ease-in;}
+                50% {bottom: 0px; animation-timing-function: ease-out;}
+                75% {bottom: 7px; animation-timing-function: ease-in;}
+                100% {bottom: 0px; animation-timing-function: ease-out;}
+            }
+            @keyframes mySpin {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(360deg);}
+            }
+            @keyframes myPulse {
+                0% {transform: scale(1.0);}
+                25% {transform: scale(1.2);}
+                50% {transform: scale(.75);}
+                75% {transform: scale(1.15);}
+                100% {transform: scale(1.0);}
+            }
+
+    }
+//reviews styling
+div.reviewWrapper {
+    background-color: rgb(225, 225, 225);
+    padding: 2rem 0;
+    text-align: center;
+    img {
+        width: 20px;
+    }
+}
+#cards {
+    text-align: center;
+    h3 {
+        margin: 2rem $gutter 0 $gutter;
+        text-align: center;
+        color: $primaryColor;
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+    section {
+        margin: 1rem;
+        padding: 5px;
+        background-color: white;
+        border-radius: 10px;
+         
+    }
+    p {
+        color: $accentColor
+    }
+}
 }// end main
 
 
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-    background-color: $primaryColor
+    background-color: $primaryColor;
 } // end footer wrapper
 
 footer {
