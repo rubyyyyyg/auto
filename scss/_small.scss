@@ -86,11 +86,13 @@ header {
         padding: .75rem $gutter;
         text-decoration: none;
         border-bottom: 1px solid $greyColor;
+        ion-icon{color: $primaryColor; padding-right: 5px;}
     }
     li.active a {
         color: $accentColor;
         background-color: rgb(221, 221, 221);
     }
+    
 }
 
 #theButton.open::before {
@@ -228,4 +230,5 @@ footer {
     text-align: center;
     line-height: $leading;
     a {color: $greyColor;}
+    
 }// end footer
